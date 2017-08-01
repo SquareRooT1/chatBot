@@ -78,8 +78,13 @@ function receivedMessage(event) {
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
-    //sendGenericMessage(senderID);
-    sendQuickMessage(senderID);
+
+    if(messageText.indexOf("onay") > -1){
+        sendQuickMessage(senderID);
+    }else {
+      sendGenericMessage(senderID);
+    }
+
 
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -95,8 +100,15 @@ function sendQuickMessage(recipientId){
       text: "Please share your location:",
       quick_replies: [
         {
-          content_type:"location",
-        }
+        content_type:"text",
+        title:"Red",
+        payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"    
+      },
+      {
+        content_type:"text",
+        title:"Green",
+        payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
+      }
       ]
     }
   }
