@@ -97,16 +97,16 @@ function sendQuickMessage(recipientId){
       id: recipientId
     },
     message: {
-      text: "Please share your location:",
+      text: "Ürünü teslim aldıysanız Onaylayın:",
       quick_replies: [
         {
         content_type:"text",
-        title:"Red",
-        payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"    
+        title:"Teslim Aldım",
+        payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
       },
       {
         content_type:"text",
-        title:"Green",
+        title:"Teslim Almadım",
         payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
       }
       ]
