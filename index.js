@@ -81,7 +81,13 @@ function receivedMessage(event) {
 
     if(messageText.indexOf("onay") > -1){
         sendQuickMessage(senderID);
-    }else {
+    }else if(messageText.indexOf("Teslim Aldım") > -1){
+      sendTextMessage(senderID,"İşleminiz Tamamlanmıştır Teşekkür ederiz. ")
+    }
+    else if(messageText.indexOf("Teslim Almadım") > -1){
+      sendTextMessage(senderID,"Sipariş takibiniz yapılıyor lütfen bekleyin.")
+    }
+    else {
       sendGenericMessage(senderID);
     }
 
@@ -100,12 +106,12 @@ function sendQuickMessage(recipientId){
       text: "Ürünü teslim aldıysanız Onaylayın:",
       quick_replies: [
         {
-        content_type:"postback",
+        content_type:"text",
         title:"Teslim Aldım",
         payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
       },
       {
-        content_type:"postback",
+        content_type:"text",
         title:"Teslim Almadım",
         payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
       }
