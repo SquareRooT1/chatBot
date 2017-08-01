@@ -106,8 +106,8 @@ function sendGenericMessage(recipientId) {
               title: "Şimdi Görüntüle"
             }, {
               type: "postback",
-              title: "Call Postback",
-              payload: "Payload for first bubble",
+              title: "Ürünü Başarılı Bir şekilde Teslim Aldım",
+              payload: "Success for first item",
             }],
           }, {
             title: "Takip Ettiğin Ürün",
@@ -120,8 +120,8 @@ function sendGenericMessage(recipientId) {
               title: "Şimdi Görüntüle"
             }, {
               type: "postback",
-              title: "Call Postback",
-              payload: "Payload for second bubble",
+              title: "Ürünü Başarılı Bir şekilde Teslim Aldım",
+              payload: "Success for second item",
             }]
           }]
         }
