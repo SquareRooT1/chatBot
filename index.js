@@ -100,12 +100,12 @@ function sendQuickMessage(recipientId){
       text: "Ürünü teslim aldıysanız Onaylayın:",
       quick_replies: [
         {
-        content_type:"text",
+        content_type:"postback",
         title:"Teslim Aldım",
         payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
       },
       {
-        content_type:"text",
+        content_type:"postback",
         title:"Teslim Almadım",
         payload:"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
       }
