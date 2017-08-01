@@ -79,11 +79,31 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     sendGenericMessage(senderID);
+    sendQuickMessage(senderID);
 
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
+
+function sendQuickMessage(recipientId){
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      text: "Please share your location:",
+      quick_replies: [
+        {
+          content_type:"location",
+        }
+      ]
+    }
+  }
+
+  callSendAPI(messageData);
+}
+
 
 function sendGenericMessage(recipientId) {
   var messageData = {
@@ -122,15 +142,6 @@ function sendGenericMessage(recipientId) {
               type: "postback",
               title: "Onayla",
               payload: "Success for second item",
-            }],
-            quick_replies : [{
-              content_type:"text",
-              title:"Onayla",
-              payload: "Confirm_Item"
-            },{
-              content_type:"text",
-              title:"Reddet",
-              payload: "Refuse_Item"
             }]
           }]
         }
