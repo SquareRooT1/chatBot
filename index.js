@@ -106,7 +106,7 @@ function sendGenericMessage(recipientId) {
               title: "Şimdi Görüntüle"
             }, {
               type: "postback",
-              title: "Ürünü Başarılı Bir şekilde Teslim Aldım",
+              title: "Onayla",
               payload: "Success for first item",
             }],
           }, {
@@ -120,7 +120,7 @@ function sendGenericMessage(recipientId) {
               title: "Şimdi Görüntüle"
             }, {
               type: "postback",
-              title: "Ürünü Başarılı Bir şekilde Teslim Aldım",
+              title: "Onayla",
               payload: "Success for second item",
             }]
           }]
