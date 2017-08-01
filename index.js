@@ -78,10 +78,8 @@ function receivedMessage(event) {
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
-    sendGenericMessage(senderID,(data) =>{
-      sendQuickMessage(senderID);
-    });
-
+    //sendGenericMessage(senderID);
+    sendQuickMessage(senderID);
 
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
@@ -107,7 +105,7 @@ function sendQuickMessage(recipientId){
 }
 
 
-function sendGenericMessage(recipientId,callback) {
+function sendGenericMessage(recipientId) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -152,8 +150,7 @@ function sendGenericMessage(recipientId,callback) {
 
   };
 
-  await  callSendAPI(messageData);
-  callback(true);
+  callSendAPI(messageData);
 }
 
 function sendTextMessage(recipientId, messageText) {
@@ -166,11 +163,11 @@ function sendTextMessage(recipientId, messageText) {
     }
   };
 
-   callSendAPI(messageData);
+  callSendAPI(messageData);
 }
 
 
-async function callSendAPI(messageData) {
+function callSendAPI(messageData) {
 
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
