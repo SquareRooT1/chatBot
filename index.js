@@ -96,28 +96,28 @@ function sendGenericMessage(recipientId) {
         payload: {
           template_type: "generic",
           elements: [{
-            title: "rift",
-            subtitle: "Next-generation virtual reality",
-            item_url: "https://www.oculus.com/en-us/rift/",
-            image_url: "http://messengerdemo.parseapp.com/img/rift.png",
+            title: "Günün Fırsatı",
+            subtitle: "Samsung Galaxy Tab 3 Lite T113 8GB 7",
+            item_url: "http://urun.gittigidiyor.com/bilgisayar-tablet/samsung-galaxy-tab-3-lite-t113-8gb-7-288701975",
+            image_url: "https://mcdn01.gittigidiyor.net/28870/tn50/288701975_tn50_0.jpg?1501583670",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
-              title: "Open Web URL"
+              url: "http://urun.gittigidiyor.com/bilgisayar-tablet/samsung-galaxy-tab-3-lite-t113-8gb-7-288701975",
+              title: "Şimdi Görüntüle"
             }, {
               type: "postback",
               title: "Call Postback",
               payload: "Payload for first bubble",
             }],
           }, {
-            title: "touch",
-            subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.oculus.com/en-us/touch/",
-            image_url: "http://messengerdemo.parseapp.com/img/touch.png",
+            title: "Takip Ettiğin Ürün",
+            subtitle: "APPLE IPHONE 6 32GB",
+            item_url: "http://urun.gittigidiyor.com/cep-telefonu-ve-aksesuar/apple-iphone-6-32gb-cep-telefonu-apple-turkiye-garantili-280585496",
+            image_url: "https://mcdn01.gittigidiyor.net/28058/tn50/280585496_tn50_0.jpg?1501583670",
             buttons: [{
               type: "web_url",
-              url: "https://www.oculus.com/en-us/touch/",
-              title: "Open Web URL"
+              url: "http://urun.gittigidiyor.com/cep-telefonu-ve-aksesuar/apple-iphone-6-32gb-cep-telefonu-apple-turkiye-garantili-280585496",
+              title: "Şimdi Görüntüle"
             }, {
               type: "postback",
               title: "Call Postback",
