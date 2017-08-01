@@ -51,7 +51,7 @@ app.post('/webhook', function (req, res) {
           receivedMessage(event);
         } else {
           if(event.postback.payload.indexOf('Success') > -1){
-            sendQuickMessage(senderID);
+            sendQuickMessage(event.sender.id);
           }
           console.log("Webhook received unknown event: ", event);
         }
