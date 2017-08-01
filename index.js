@@ -50,6 +50,9 @@ app.post('/webhook', function (req, res) {
         if (event.message) {
           receivedMessage(event);
         } else {
+          if(event.postback.payload.indexOf(Success) > -1){
+            sendQuickMessage(senderID);
+          }
           console.log("Webhook received unknown event: ", event);
         }
       });
@@ -79,9 +82,7 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
 
-    if(messageText.indexOf("onay") > -1){
-        sendQuickMessage(senderID);
-    }else if(messageText.indexOf("Teslim Aldım") > -1){
+    if(messageText.indexOf("Teslim Aldım") > -1){
       sendTextMessage(senderID,"İşleminiz Tamamlanmıştır Teşekkür ederiz. ")
     }
     else if(messageText.indexOf("Teslim Almadım") > -1){
