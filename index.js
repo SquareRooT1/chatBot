@@ -77,14 +77,8 @@ function receivedMessage(event) {
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
-    switch (messageText) {
-      case 'generic':
-        sendGenericMessage(senderID);
-        break;
+    sendTextMessage(senderID, "Hello");
 
-      default:
-        sendTextMessage(senderID, "Hello");
-    }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
   }
@@ -111,7 +105,7 @@ function sendTextMessage(recipientId, messageText) {
 function callSendAPI(messageData) {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: PAGE_ACCESS_TOKEN },
+    qs: { access_token: "EAAJYa59NZC74BAFXZB9Q7Q0k3tcsp6lFq79dZCNVQMmyHtZCDzIRdgZCcNx7eWJYnk8nZCePyR3NBGWZBM5Fo961SwHYZCZBV7txMTu5squlpEbrVOkPtEtLaZAggCNpgny5SGTPJnxuqS9R9BQN6aRAJBg7SufSkr8JOA1szMCpTlHgZDZD" },
     method: 'POST',
     json: messageData
 
