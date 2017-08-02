@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
-  response.send('App is Running');
+  response.send('App is Running ');
 });
 
 app.get('/webhook', function(req, res) {
   if (req.query['hub.mode'] === 'subscribe' &&
-      req.query['hub.verify_token'] === <VERIFY_TOKEN>) {
+      req.query['hub.verify_token'] === "my_verify_token_for_gg") {
     console.log("Validating webhook");
     res.status(200).send(req.query['hub.challenge']);
   } else {
@@ -180,10 +180,12 @@ function sendTextMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
+
 function callSendAPI(messageData) {
+
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: <ACCESS_TOKEN> },
+    qs: { access_token: "EAAJYa59NZC74BAFXZB9Q7Q0k3tcsp6lFq79dZCNVQMmyHtZCDzIRdgZCcNx7eWJYnk8nZCePyR3NBGWZBM5Fo961SwHYZCZBV7txMTu5squlpEbrVOkPtEtLaZAggCNpgny5SGTPJnxuqS9R9BQN6aRAJBg7SufSkr8JOA1szMCpTlHgZDZD" },
     method: 'POST',
     json: messageData
 
