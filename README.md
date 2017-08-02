@@ -1,7 +1,8 @@
+#Heroku
+This application use heroku node-js-getting-started project. If you don't know anything about Heroku please check
+https://github.com/heroku/node-js-getting-started.
+
 # node-js-getting-started
-
-A barebones Node.js app using [Express 4](http://expressjs.com/).
-
 This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
 
 ## Running Locally
@@ -9,13 +10,21 @@ This application supports the [Getting Started with Node on Heroku](https://devc
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ git clone https://github.com/SquareRooT1/SimpleFacebookChatBot.git # or clone your own fork
 $ npm install
 $ npm start
 ```
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
+
+## Configuration
+Then open [facebook messanger-platform Documentation](https://developers.facebook.com/docs/messenger-platform/) and start with getting started . Create an application get your VERIFY_TOKEN and ACCESS_TOKEN then change  VERIFY_TOKEN and ACCESS_TOKEN in here.
+```
+if (req.query['hub.mode'] === 'subscribe' &&
+    req.query['hub.verify_token'] === <VERIFY_TOKEN>)
+    
+  qs: { access_token: <ACCESS_TOKEN> }
+```      
 
 ## Deploying to Heroku
 
@@ -27,13 +36,3 @@ $ heroku open
 or
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
