@@ -4,7 +4,7 @@ var request = require("request");
 
 var app = express();
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 3332));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
