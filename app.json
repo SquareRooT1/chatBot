@@ -2,7 +2,7 @@
   "name": "Chat bot with heroku getting started",
   "description": "Express supported chat bot",
   "repository": "https://github.com/SquareRooT1/chatBot.git",
-  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-getting-started/public/node.svg",
   "keywords": ["node", "express", "facebook"],
   "image": "heroku/nodejs"
 }
